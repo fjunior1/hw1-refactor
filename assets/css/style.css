@@ -8,6 +8,7 @@ body {
     background-color: #d9dcd6;
 }
 
+/*Note: this is not the header TAG but a DIV with class "header" */
 .header {
     padding: 20px;
     display: flex;
@@ -36,12 +37,17 @@ body {
 
 .header nav a { /* header nav a*/
     list-style-type: none;
+    white-space: nowrap;  /* Added this to make sure link text stays in one line*/
 }
 
+/* There is no DIV UL LI  inside DIV with clas header
+   Left the code commented out to review  */
+/*
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
 }
+*/
 
 a {
     color: #ffffff;
