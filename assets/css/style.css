@@ -9,7 +9,7 @@ body {
 }
 
 /*Note: this is not the header TAG but a DIV with class "header" */
-.header {
+header {
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -18,16 +18,16 @@ body {
     color: #ffffff;
 }
 
-.header h1 {
-    display:inline-flex  /*inline-block*/;
+header h1 {
+    display:inline-block;
     font-size: 48px;
 }
 
-.header h1 .seo {
+header h1 .seo {
    color: #d9dcd6;
 }
 
-.header nav { /*nav tag inside header*/
+header nav { /*nav tag inside header*/
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -35,23 +35,20 @@ body {
     font-size: 20px;
 }
 
-.header nav a { /* header nav a*/
+header  ul {
     list-style-type: none;
-    white-space: nowrap;  /* Added this to make sure link text stays in one line*/
 }
 
-/* There is no DIV UL LI  inside DIV with clas header
-   Left the code commented out to review  */
-/*
-.header div ul li {
+header  ul li {
     display: inline-block;
     margin-left: 25px;
 }
-*/
 
+/* color and text decoration for links*/
 a {
     color: #ffffff;
     text-decoration: none;
+    white-space: nowrap; 
 }
 
 p {
@@ -71,23 +68,23 @@ p {
     max-height: 200px;
 }
 
-/* found examples in 
-    https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex_responsive
-*/
+/* found examples in  https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex_responsive */
 .flxwrapper {
     display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
     flex-wrap: wrap;
 }
 
 .flxwrapper .content {
-     flex: 75% ;
+     flex: 80% ;
      min-width: 510px;
  }
 
  .flxwrapper .content  div{
     margin-bottom: 20px;
-    padding: 10px; 
-    margin-right: 10px;
+    padding: 50px; 
+    margin-right: 20px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
@@ -96,14 +93,15 @@ p {
 
  .flxwrapper .benefits {
     max-width: 500px;
-    flex: 25%;
+    flex: 20%;
     flex-direction: column;
     background-color: #2589bd;
 }
 
 .flxwrapper .benefits  div{
-   text-align: center;
+   /*text-align: center;*/
     margin-bottom: 20px; 
+    padding: 20px;
     height: 300px;
  }
 
@@ -139,29 +137,19 @@ p {
     background-color: #2589bd;
 }
 
-/*
-benefit-lead, benefit-brand and benefit-cost seem to be the same settings
-All these are within a div with calas <benefit>. 
-Use a common CSS setting for all benefits-*  using <benefits>
-*/
+/* Use a common CSS setting for all benefits-*  using <benefits> */
 .benefits {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-/*
-.benefit-lead h3, .benefit-brand h3 and .benefit-cost h3 are the same
-Use a common .benefits h3{} for all these
-*/
+/*Use a common .benefits h3{} for.benefit-lead h3, .benefit-brand h3 and .benefit-cost h3*/
 .benefits h3 {
     margin-bottom: 10px;
     text-align: center;    
 }
 
-/*
-.benefit-lead img, .benefit-brand img and  .benefit-cost img are the same
-use a common .benefits img {}
-*/
+/* use a common .benefits img {} for.benefit-lead img, .benefit-brand img and .benefit-cost img*/
 .benefits img {
     margin: 10px auto;
     max-width: 150px;    
@@ -185,13 +173,10 @@ use a common .benefits img {}
 /* content h2 */
 .content h2 {
     margin-bottom: 20px;
-    font-size: 24px; /* changed font size from 36px  to 24px*/
+    font-size: 36px; /* changed font size from 36px  to 24px*/
 }
 
-/*
-this is using div and class footer, 
-change to HTML tag "footer" and "footer h2" to abide to HTML standard page structure better
-*/
+/* used div and class footer, change to HTML tag "footer" and "footer h2" to abide to HTML standard */
 footer {
     padding: 30px;
     clear: both;
